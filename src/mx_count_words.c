@@ -1,19 +1,17 @@
 #include "libmx.h"
 
-int mx_count_words(const char *str, char delimiter){
+int mx_count_words(const char *str, char c) {
     int wordCount = 0;
-    while(*str)
-    {
-        if (*str != delimiter)
+    while(*str) {
+        if (*str != c)
             str++;
-        else
-        {
+        else {
             wordCount++;
-            while ( *str == delimiter)
+            while ( *str == c)
                 str++;
         }
     }
-    if(*(str-1) == delimiter) wordCount--;
+    if (*(str-1) == c) wordCount--;
     else wordCount++;
     return wordCount;
 }

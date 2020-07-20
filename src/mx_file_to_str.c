@@ -1,6 +1,6 @@
 #include "libmx.h"
 
-char *mx_file_to_str(const char *file){
+char *mx_file_to_str(const char *file) {
 
 	char buff;
 	int file1 = open(file, O_RDONLY);
@@ -30,11 +30,3 @@ char *mx_file_to_str(const char *file){
 
 	return string;
 }
-
-// int main()
-// {
-// 	//char filename[] = "test_file";
-// 	char *result = mx_file_to_str("test_file");
-// 	printf("%s\n", result);
-// 	return 0;
-// }
