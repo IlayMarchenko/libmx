@@ -1,6 +1,6 @@
 #include "libmx.h"
 
-void mx_printf(char *str, int num, ...) {
+void mx_int_printf(char *str, int num, ...) {
     va_list list_for_len;
     int size_of_numbers = 0;
     va_start(list_for_len, num);
@@ -59,6 +59,6 @@ void mx_printf(char *str, int num, ...) {
 }
 
 int main () {
-    mx_printf("Hello :\n%d\n%d\n%d\n%d\n%d\n%d\n", 6, 1, 22, 333, 4444, 55555, 666666);
+    mx_int_printf("Hello :\n%d\n%d\n%d\n%d\n%d\n%d\n", 6, 1, 22, 333, 4444, 55555, 666666);
     return 0;
 }
