@@ -6,6 +6,6 @@ void mx_to_lower(char *str) {
         if (*a >= 'A' && *a <= 'Z') {
             *a += 32;
         }
-        *a++;
+        a++;
     }
 }

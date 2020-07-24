@@ -6,6 +6,6 @@ void mx_to_upper(char *str) {
         if (*a >= 'a' && *a <= 'z') {
             *a -= 32;
         }
-        *a++;
+        a++;
     }
 }

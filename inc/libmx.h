@@ -7,6 +7,14 @@
 #include <stdbool.h>
 #include <fcntl.h>
 #include <string.h>
+#include <errno.h>
+#include <assert.h>
+#include <complex.h>
+#include <ctype.h>
+#include <float.h>
+#include <limits.h>
+#include <math.h>
+#include <stdarg.h>
 
 typedef struct s_list {
     void *data;
