@@ -1,29 +1,14 @@
 #include "libmx.h"
 
+/**
+ * Function that has the same behavior as the standard stdlib functionmemchr
+ */
 void *mx_memchr(const void *s, int c, size_t n) {
+    unsigned char *string = (unsigned char *)s;
 
-	char *copy = (char *)s;
-	int size = (int)n;
+    for (size_t i = 0; i < n; i++)
+        if (string[i] == (unsigned char)c)
+            return string + i;
 
-	for (int i = 0; i < size; i++) {
-		if (*copy != c) {
-			copy++;
-		}
-		else {
-			break;
-		}
-	}
-
-	return copy;
+    return NULL;
 }
-
-// int main() {
-// 	const char str[] = "http://www.tutorialspoint.com";
-//     const char ch = '.';
-//     char *ret;
-
-//     ret = mx_memchr(str, ch, mx_strlen(str));
-
-//     printf("String after |%c| is - |%s|\n", ch, ret);
-// 	return 0;
-// }

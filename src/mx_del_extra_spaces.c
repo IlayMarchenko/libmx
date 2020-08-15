@@ -31,18 +31,7 @@ char *mx_del_extra_spaces(const char *str) {
 		}
 	}
 	free(sub_result);
-	result = (char *)realloc(result, sizeof(char) * mx_strlen(result) + 1);
+	result = (char *)mx_realloc(result, sizeof(char) * mx_strlen(result) + 1);
     return result;
 }
 
-// int main() {
-// 	char *s1 = "\thello    my          dear    \t     \tfriend !    \t\n  ";
-// 	printf("%s\n", s1);
-
-// 	char *s2 = mx_del_extra_spaces(s1);
-// 	printf("%s\n", s2);
-// 	s2++;
-
-// 	system("leaks test"); 
-// 	return 0;
-// }

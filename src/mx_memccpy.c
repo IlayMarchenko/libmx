@@ -1,23 +1,18 @@
 #include "libmx.h"
 
+/**
+ * Function that has the same behavior as the standard stdlib function memccpy
+ */
 void *mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n) {
-	int size = n;
-	char *res = (char *)dst;
-	char *donor = (char *)src;
+    unsigned char *d = (unsigned char *)dst;
+    unsigned char *s = (unsigned char *)src;
 
-	for (int i = 0; i < size; i++) {
-		if (res[i] == c) {
-			break;
-		}
-		res[i] = donor[i];
-	}
-	return res;
+    for (size_t i = 0; i < n; i++) {
+        d[i] = s[i];
+
+        if (s[i] == (unsigned char)c)
+            return d + i + 1;
+    }
+
+    return NULL;
 }
-
-// int main() {
-// 	const char src[11] = "1234567890";
-// 	char dest[50] = "http://www.tutorialspoint.com";
-// 	mx_memccpy(dest, src, 'z',10);
-// 	printf("%s\n", dest);
-// 	return 0;
-// }

@@ -31,9 +31,3 @@ void *mx_memmem(const void *big, size_t big_len, const void *little, size_t litt
 	return NULL;
 }
 
-// int main() {
-// 	char *s1 = "Hello man ! How are you ?";
-// 	char *s2 = "How";
-// 	printf("%s\n", mx_memmem(s1, mx_strlen(s1), s2, mx_strlen(s2)));
-// 	return 0;
-// }

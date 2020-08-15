@@ -35,8 +35,5 @@ void mx_print_unicode(wchar_t c) {
     write(1, byte, size);
 }
 
-//int main() {
-//    mx_print_unicode(L'æ');
-//    return 0;
-//}
+
 

@@ -12,19 +12,3 @@ void mx_push_front(t_list **list, void *data){
 
 }
 
-// int main(){
-//
-// 	t_list *first = mx_create_node("hello");
-//
-// 	mx_push_front(&first, "first");
-// 	mx_push_front(&first, "second");
-// 	mx_push_front(&first, "s");
-//
-// 	while (first) {
-// 		printf("%s\n", first->data);
-// 		first = first->next;
-// 	}
-//
-//
-// 	return 0;
-// }

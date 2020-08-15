@@ -21,7 +21,7 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
         len_of_static = mx_strlen(static_str);
 
         // allocate memory for temporary variable
-        temp_str = (char *)realloc(temp_str, sizeof(char) * (buf_size) * i + len_of_static);
+        temp_str = (char *)mx_realloc(temp_str, sizeof(char) * (buf_size) * i + len_of_static);
 
         // import data from static variable to temporary
         mx_strcat(temp_str, static_str);
@@ -53,7 +53,7 @@ int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd) {
     // loop finding needed element, update static string, return data into lineptr and find number of element which we passed into this string.
     while(!find_delim) {
         // reallocate more memory every time when we need it
-        temp_str = (char *)realloc(temp_str, sizeof(char) * (buf_size) * i + len_of_static);
+        temp_str = (char *)mx_realloc(temp_str, sizeof(char) * (buf_size) * i + len_of_static);
 
         // read new data into buffer if it is possible and return -1 if not
         if (read(fd, buff, buf_size)) {}

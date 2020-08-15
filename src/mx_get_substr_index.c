@@ -34,12 +34,6 @@ int mx_get_substr_index (const char *str, const char *sub) {
    return -2;
 }
 
-// int main() {
-//    mx_get_substr_index("TutorialsPoint", "Point");
-//    system("leaks untitled");
-//    //printf("%d\n", a);
-//    return 0;
-// }
 
 
 

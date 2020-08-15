@@ -11,10 +11,3 @@ void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n) {
 	return res;
 }
 
-// int main() {
-// 	const char src[50] = "lolollo";
-// 	char dest[50] = "http://www.tutorialspoint.com";
-// 	mx_memcpy(dest, src, 7);
-// 	printf("%s\n", dest);
-// 	return 0;
-// }

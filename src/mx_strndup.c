@@ -1,19 +1,10 @@
 #include "libmx.h"
 
 char *mx_strndup(const char *s1, size_t n) {
-    char *result = NULL;
-    result = mx_strnew(n);
-    int b = n;
+    char *new_str = mx_strnew(n);
 
-    for (int i = 0; i < b; ++i) {
-    	result[i] = s1[i];
-    }
+    if (new_str == NULL || s1 == NULL) return NULL;
 
-    return result;
+    mx_strncpy(new_str, s1, n);
+    return new_str;
 }
-
-// int main() {
-// 	char *s = "hello";
-// 	printf("%s\n", mx_strndup(s, 5));
-// 	return 0;
-// }

@@ -13,9 +13,4 @@ t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *)) {
     return lst;
 }
 
-// static bool mx_check(void *a, void *b) {
-//     if (a > b)
-//         return true;
-//     return false;
-// }
 

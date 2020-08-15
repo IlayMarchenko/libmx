@@ -28,11 +28,3 @@ int mx_count_substr(const char *str, const char *sub) {
 	return result;
 }
 
-//int main(){
-//   char str[50] = "yo yo Neo";
-//   char sub [3] = "yo";
-//   int res = mx_count_substr(str, sub);
-//   printf("%d", res);
-//   return 0;
-//}
-

@@ -34,18 +34,6 @@ char *mx_strtrim(const char *str) {
         i++;
     }
 
-    result = (char *)realloc(result, sizeof(char) * mx_strlen(result) + 1);
+    result = (char *)mx_realloc(result, sizeof(char) * mx_strlen(result) + 1);
     return result;
 }
-
-// int main() {
-// 	char *s1 = "    \t hello my dear friend !   \t \n";
-// 	printf("%s\n", s1);
-
-// 	char *s2 = mx_strtrim(s1);
-// 	printf("%s\n", s2);
-
-// 	system("leaks test"); 
-
-// 	return 0;
-// }

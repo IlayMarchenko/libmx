@@ -11,9 +11,3 @@ t_list *mx_create_node(void *data){
 	return head;
 }
 
-// int main()
-// {
-// 	t_list* head = mx_create_node("hello");
-// 	printf("%s\n", head->data);
-// 	return 0;
-// }

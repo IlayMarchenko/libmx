@@ -14,7 +14,3 @@ int mx_memcmp(const void *s1, const void *s2, size_t n) {
 	return 0;
 }
 
-// int main() {
-// 	printf("%d\n", mx_memcmp("abc", "ABC", 3));
-// 	return 0;
-// }

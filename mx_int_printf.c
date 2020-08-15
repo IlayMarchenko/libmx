@@ -51,7 +51,7 @@ void mx_int_printf(char *str, int num, ...) {
             }
         }
         str += mx_strlen("%d");
-        free(current);
+        // mx_strdel(&current);
         current = mx_strnew(11);
     }
     va_end(list);
@@ -60,5 +60,6 @@ void mx_int_printf(char *str, int num, ...) {
 
 int main () {
     mx_int_printf("Hello :\n%d\n%d\n%d\n%d\n%d\n%d\n", 6, 1, 22, 333, 4444, 55555, 666666);
+    system("leaks -q printf");
     return 0;
 }
